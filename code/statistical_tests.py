@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import numpy as np
 from sklearn.metrics import f1_score, accuracy_score, mean_absolute_error, log_loss
 import tensorflow as tf
@@ -61,7 +59,7 @@ def evaluate():
             y_pred = y_yes_no[1:]
             y_true = y_gold[1:]
 
-        # exclude ninth scenario
+        # exclude tenth scenario
         elif y_pred == y_step_vic:
             y_pred = y_step_vic[:9] + y_step_vic[10:]
             y_true = y_gold[:9] + y_gold[10:]
