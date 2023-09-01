@@ -1,0 +1,2 @@
+This is the Repository of the LLM Moral Reasoning Capabilities Project by Greta Hristozova (3919059), Daniel Kossack, Yuguang Lin (6112082), Noemi Szardarjan (5673197).
+It contains all experiental results, used python scripts and the paper. 
