@@ -1,8 +1,5 @@
-import numpy as np
-from sklearn.metrics import f1_score, accuracy_score, mean_absolute_error, log_loss
+from sklearn.metrics import f1_score, accuracy_score, confusion_matrix, mean_absolute_error
 import tensorflow as tf
-from tensorflow import keras
-from keras.losses import binary_crossentropy
 
 # scenarios ordered by ascending human.response
 
@@ -20,7 +17,7 @@ y_step_fal = [0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.5, 0, 0, 0, 0, 0, 0]
 
 cases = [y_yes_no, y_eth_com, y_step_vic, y_step_fal]
 
-# ratio to 0/1 label
+# probability to 0/1 label
 def to_binary(results):
     return [1 if r > 0.5 else 0 for r in results]
 
@@ -33,11 +30,10 @@ def f1(y_true, y_pred):
 def acc(y_true, y_pred):
     return accuracy_score(to_binary(y_true), to_binary(y_pred))
 
-#TODO
+# conservativity
 def cons(y_true, y_pred):
-    # false negative/all false
-    # is faster to compute by hand
-    pass
+    cm = confusion_matrix(to_binary(y_true), to_binary(y_pred))
+    return cm[1][0]/(cm[1][0]+cm[0][1])
     
 # mean absolute error
 def mae(y_true, y_pred):
@@ -64,9 +60,7 @@ def evaluate():
             y_pred = y_step_vic[:9] + y_step_vic[10:]
             y_true = y_gold[:9] + y_gold[10:]
 
-        # TODO add cons(gold, y)
-        scores = [f1(y_true, y_pred), acc(y_true, y_pred), mae(y_true, y_pred), bce(y_true, y_pred)]
-        
+        scores = [f1(y_true, y_pred), acc(y_true, y_pred), cons(y_true, y_pred), mae(y_true, y_pred), bce(y_true, y_pred)]
         print("\t".join([str(s) for s in scores]))
 
 
