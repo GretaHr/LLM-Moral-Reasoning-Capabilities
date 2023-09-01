@@ -1,0 +1,17 @@
+id,context,condition,study,human.response,0,0.25,0.5,0.75,1,no,yes,average,decisiveness
+1,erasemural,million,blue.house,0.14516129,3,1,6,0,0,4,0,0,0.40
+2,blueoutsidedoor,thousand,blue.house,0.174603175,8,1,1,0,0,9,0,0,0.90
+3,not.fav.flavor,snack2,lines,0.25,10,0,0,0,0,10,0,0,1.00
+4,baby,airport,lines,0.255813954,7,1,2,0,0,8,0,0,0.80
+5,hungry,adult,lines,0.270833333,10,1,0,0,0,11,0,0,1.00
+6,smearpoop,million,blue.house,0.274193548,4,2,5,0,0,6,0,0,0.55
+7,20_minutes,airport,lines,0.418604651,9,0,0,0,1,9,1,0.1,1.00
+8,phone,noise,cannonball,0.472972973,7,0,4,0,0,7,0,0,0.64
+9,drowning,noise,cannonball,0.675675676,9,0,2,0,0,9,0,0,0.82
+10,bee,noise,cannonball,0.702702703,1,0,9,0,1,1,1,0.5,0.18
+11,rain,splash,cannonball,0.703333333,8,1,2,0,0,9,0,0,0.82
+12,family,deli,lines,0.779069767,11,0,0,0,0,11,0,0,1.00
+13,bring.water,adult,lines,0.791666667,2,0,4,0,5,2,5,0.714285714,0.64
+14,rotten,snack2,lines,0.840909091,2,0,5,0,3,2,3,0.6,0.50
+15,erasemural,gun,blue.house,0.866666667,10,0,1,0,0,10,0,0,0.91
+16,diabetic,deli,lines,0.88372093,0,0,3,0,8,0,8,1,0.73
